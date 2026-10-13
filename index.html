@@ -2,44 +2,305 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Terms of Service – Bet Against Yourself</title>
-<meta name="description" content="Bet Against Yourself – the alarm clock with real stakes. Wake up or pay.">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Bet Against Yourself – Wake up or pay</title>
+<meta name="description" content="The alarm clock that takes your money if you don't get up. Put €5–100 on your alarm, walk 100 steps in 5 minutes – or pay.">
+<meta name="theme-color" content="#000000">
+<meta property="og:title" content="Bet Against Yourself – Wake up or pay">
+<meta property="og:description" content="The alarm clock that takes your money if you don't get up.">
+<meta property="og:url" content="https://getbetagainstyourself.com/">
+<meta property="og:type" content="website">
+<link rel="preload" href="/fonts/archivo-wdth.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/fonts.css">
-<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/landing.css">
 </head>
 <body>
-<header><a class="logo" href="/">BET AGAINST YOURSELF</a></header>
-<main>
-<h1>TERMS OF SERVICE</h1>
-<p class="meta">Last updated: October 2026</p>
-<h2>1. SCOPE</h2>
-<p>These Terms of Service apply to the use of the mobile application &quot;Bet Against Yourself&quot; (hereinafter &quot;App&quot;), operated by August Albrecht, Bleibtreustrasse 41, 10623 Berlin, Germany, <a href="mailto:support@getbetagainstyourself.com.">support@getbetagainstyourself.com.</a></p>
-<h2>2. SERVICE DESCRIPTION</h2>
-<p>Bet Against Yourself is an alarm app that uses the principle of loss aversion. Users set a wake-up time and commit a monetary stake. If the step goal chosen for the alarm (50 to 200 steps) is not recorded within 5 minutes after the alarm, the stake is automatically charged. The App is a self-commitment tool, not gambling: there is nothing to win, and completing the challenge only means that no fee is charged.</p>
-<h2>3. MINIMUM AGE</h2>
-<p>Use of the App is only permitted for users aged 18 and older. By registering, you confirm that you are at least 18 years old.</p>
-<h2>4. REGISTRATION AND ACCOUNT</h2>
-<p>You are required to provide accurate information during registration. You are responsible for all activities that occur under your account. Sharing access credentials with third parties is prohibited.</p>
-<h2>5. PAYMENTS</h2>
-<p>Payments are processed through the third-party provider Stripe, Inc., by card or Apple Pay. We do not store credit card data on our servers. A charge only occurs if the challenge is not completed (step goal not reached within 5 minutes after the alarm). The stake is €5 to €100 per bet. Forfeited stakes are retained by the operator of the App as a fee; they are not donated or passed on to third parties.</p>
-<p>The result is determined on our servers. If the App does not report a completed challenge within 35 minutes after the alarm – for example because the App was closed, the device was offline or switched off – the challenge counts as not completed and the stake is charged, even if the App is not open. If a charge fails, no new bets can be placed until it has been settled with a valid card or Apple Pay. Refunds are generally excluded unless a technical error on our part occurs. As a voluntary goodwill gesture, the App may offer a &quot;joker&quot;: once every 30 days, a lost stake can be refunded or waived within 48 hours after the alarm. There is no legal entitlement to the joker; we may change or discontinue it at any time with effect for the future.</p>
-<h2>6. CANCELLATION</h2>
-<p>A bet can be cancelled free of charge up to 2 hours before the set wake-up time. After this deadline, cancellation is no longer possible.</p>
-<h2>7. HEALTHKIT AND HEALTH DATA</h2>
-<p>The App counts steps using the motion sensors of your device (Core Motion). Step data is processed on your device; only the step count of a challenge is transmitted to our servers to determine the result.</p>
-<h2>8. AVAILABILITY</h2>
-<p>We strive for high availability of the App but do not guarantee uninterrupted operation. In the event of technical failures that prevent accurate step measurement, no charges will be made.</p>
-<h2>9. LIMITATION OF LIABILITY</h2>
-<p>The App is intended solely for personal motivation. We are not liable for indirect damages, lost profits, or consequential damages. Our liability is limited to the amount of the most recent transaction.</p>
-<h2>10. CHANGES</h2>
-<p>We reserve the right to update these Terms of Service at any time. Material changes will be communicated via push notification or email. Continued use of the App after changes take effect constitutes acceptance.</p>
-<h2>11. GOVERNING LAW</h2>
-<p>The laws of the Federal Republic of Germany apply. Place of jurisdiction is Berlin.</p>
-<p>Contact: <a href="mailto:support@getbetagainstyourself.com">support@getbetagainstyourself.com</a></p>
-</main>
-<footer>
-<a href="/terms/">TERMS</a> · <a href="/privacy/">PRIVACY</a> · <a href="/support/">SUPPORT</a> · <a href="/imprint/">IMPRINT</a>
-</footer>
+
+<div class="wrap">
+  <header class="top">
+    <a class="logo" href="/">BET AGAINST YOURSELF</a>
+    <span class="badge">Soon on the App Store</span>
+  </header>
+
+  <!-- Hero: die These – du stehst nicht auf -->
+  <section class="hero">
+    <div>
+      <h1 class="poster"><span data-type>You won't</span> <span class="ash" data-type>get up.</span></h1>
+      <p class="voice" data-voice="We both know it.">We both know it.</p>
+      <p class="lead">The alarm clock that takes your money if you don't. Put <b>€5–100</b> on your alarm.
+        When it rings, walk <b>100 steps in 5 minutes</b>. Make it and keep your money. Don't, and it's gone.</p>
+      <div class="cta-row">
+        <a class="btn" href="#how">Prove me wrong →</a>
+        <span class="fine-note">iPhone only · 18+ · Coming soon</span>
+      </div>
+    </div>
+
+    <div class="phone" aria-label="App screen after a lost challenge">
+      <p class="eyebrow">Challenge over</p>
+      <p class="poster big">20€.<br><span class="red">Gone.</span></p>
+      <p class="sub">To us. Not to charity. Us.</p>
+      <div class="receipt">
+        <div class="t">RECEIPT OF SHAME</div>
+        <div class="c">No. 000042</div>
+        <hr>
+        <div class="r"><span>ALARM</span><span>06:30</span></div>
+        <div class="r"><span>STEPS</span><span>37 / 100</span></div>
+        <div class="r"><span>REASON</span><span>OVERSLEPT</span></div>
+        <hr>
+        <div class="r total"><span>TOTAL</span><span>−20,00 €</span></div>
+        <div class="thx">*** THANK YOU FOR YOUR WEAKNESS ***</div>
+      </div>
+      <p class="voice">Or are you giving up?</p>
+      <div class="p-btn">REMATCH</div>
+    </div>
+  </section>
+
+  <!-- So funktioniert's -->
+  <section class="block" id="how">
+    <div class="block-head">
+      <p class="eyebrow">How it works</p>
+      <h2 class="poster">Three steps.<br><span class="red">No snooze.</span></h2>
+    </div>
+    <ol class="steps">
+      <li>
+        <span class="n">01</span>
+        <h3 class="poster">Set it.</h3>
+        <p>Pick a time, pick your days, pick a stake between €5 and €100. You sign a contract with yourself. Literally.</p>
+      </li>
+      <li>
+        <span class="n">02</span>
+        <h3 class="poster">Walk.</h3>
+        <p>A real alarm rings – even on silent. You have 5 minutes for 50–200 steps. Stop moving and it rings again.</p>
+      </li>
+      <li>
+        <span class="n">03</span>
+        <h3 class="poster">Keep it.<br><span class="red">Or don't.</span></h3>
+        <p>Made it? Your money stays yours. Didn't? Your card gets charged. No arguing, no excuses.</p>
+      </li>
+    </ol>
+  </section>
+
+  <!-- Warum es funktioniert -->
+  <section class="block">
+    <div class="why">
+      <div>
+        <div class="block-head">
+          <p class="eyebrow">Why it works</p>
+          <h2 class="poster">Loss<br>aversion.</h2>
+        </div>
+        <div class="body">
+          <p>Losing money hurts about twice as much as winning the same amount feels good. Kahneman and Tversky showed it in 1979. Kahneman later won a Nobel Prize for it.</p>
+          <p><b>So we don't reward you for getting up. We take money when you don't.</b></p>
+          <p class="voice" data-voice="Your brain will do anything to keep those 20 €. Even get up.">Your brain will do anything to keep those 20 €. Even get up.</p>
+        </div>
+      </div>
+      <div class="bars" role="img" aria-label="Losing 20 euros hurts about twice as much as finding 20 euros feels good">
+        <div>
+          <div class="bar-l"><span>Find 20 € on the street</span><span class="ash">feels this good</span></div>
+          <div class="track"><div class="fill"></div></div>
+        </div>
+        <div>
+          <div class="bar-l"><span>Lose 20 €</span><span class="red">hurts this much</span></div>
+          <div class="track"><div class="fill loss"></div></div>
+        </div>
+        <div class="axis"><span>0</span><span>1×</span><span>2×</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kleingedrucktes, groß -->
+  <section class="block">
+    <div class="block-head">
+      <p class="eyebrow">Okay. Seriously for a second.</p>
+      <h2 class="poster">The fine print.<br><span class="red">In big print.</span></h2>
+    </div>
+    <div class="fine">
+      <div>
+        <h3 class="poster">You fail → <span class="red">we keep it.</span></h3>
+        <p>Not charity. Not your friends. Us. At least we're honest about it.</p>
+      </div>
+      <div>
+        <h3 class="poster">You get up → you keep it.</h3>
+        <p>We earn nothing when you win. We're still rooting for you. Mostly.</p>
+      </div>
+      <div>
+        <h3 class="poster">Backing out? Until 2 h before.</h3>
+        <p>Cancel any stake for free until 2 hours before the alarm. After that, it's locked.</p>
+      </div>
+      <div>
+        <h3 class="poster">Your card stays with Stripe.</h3>
+        <p>Payments run through Stripe. We never see your card number. Card or Apple Pay.</p>
+      </div>
+      <div>
+        <h3 class="poster">No subscription.</h3>
+        <p>The app is free. You only pay when you lose a challenge you set up yourself.</p>
+      </div>
+      <div>
+        <h3 class="poster">Round one is free.</h3>
+        <p>A practice alarm rings in 60 seconds. No money. Just humiliation.</p>
+      </div>
+      <div class="statement" aria-label="Example line on a bank statement">
+        <div class="h"><span>YOUR BANK STATEMENT</span><span>ONLY AFTER A LOST CHALLENGE</span></div>
+        <div class="row"><span>07 OCT</span><span>BETAGAINST* WAKE STAKE</span><b>−20,00 €</b></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Receipt of Shame -->
+  <section class="block">
+    <div class="shame">
+      <div>
+        <div class="block-head">
+          <p class="eyebrow">Fail, and you get a receipt</p>
+          <h2 class="poster">Post it.<br><span class="red">Or hide it.</span></h2>
+        </div>
+        <p class="lead ash" style="max-width:32em">Every loss comes with a Receipt of Shame. Share it with your friends – or pray nobody asks why you're €20 poorer. Win, and you get bragging rights instead.</p>
+        <p class="voice" data-voice="Your friends will love this.">Your friends will love this.</p>
+      </div>
+      <div class="receipt">
+        <div class="t">RECEIPT OF SHAME</div>
+        <div class="c">No. 004711</div>
+        <hr>
+        <div class="r"><span>DATE</span><span>MON 06:30</span></div>
+        <div class="r"><span>STEPS</span><span>12 / 100</span></div>
+        <div class="r"><span>REASON</span><span>OVERSLEPT. AGAIN.</span></div>
+        <hr>
+        <div class="r total"><span>TOTAL</span><span>−50,00 €</span></div>
+        <div class="r"><span>PAID TO</span><span>BET AGAINST YOURSELF</span></div>
+        <div class="r"><span>STATUS</span><span>PAID</span></div>
+        <div class="thx">*** THANK YOU FOR YOUR WEAKNESS ***</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Coming soon -->
+  <section class="block" id="next">
+    <div class="block-head">
+      <p class="eyebrow">What's next</p>
+      <h2 class="poster">Waking up is<br><span class="red">round one.</span></h2>
+    </div>
+    <div class="soon">
+      <article>
+        <span class="chip live">Launching now</span>
+        <h3 class="poster">Wake up.</h3>
+        <p>Walk 100 steps within 5 minutes of your alarm.</p>
+        <p class="rule">Stay in bed → pay.</p>
+      </article>
+      <article>
+        <span class="chip">Coming soon</span>
+        <h3 class="poster">Be on time.</h3>
+        <p>Be at the office, the gym or the lecture hall by 8:00. Your location checks you're within 100 meters.</p>
+        <p class="rule">Late → pay.</p>
+      </article>
+      <article>
+        <span class="chip">Coming soon</span>
+        <h3 class="poster">Work out.</h3>
+        <p>Log the workout you promised yourself – through Apple Health, your Apple Watch or Strava.</p>
+        <p class="rule">Skip it → pay.</p>
+      </article>
+      <article>
+        <span class="chip">Coming soon</span>
+        <h3 class="poster">Put the phone down.</h3>
+        <p>Set a daily screen-time limit for the apps that eat your day.</p>
+        <p class="rule">Scroll past it → pay.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="block">
+    <div class="block-head">
+      <p class="eyebrow">Questions</p>
+      <h2 class="poster">Excuses,<br><span class="red">answered.</span></h2>
+    </div>
+    <div class="faq">
+      <details>
+        <summary>Is this gambling?</summary>
+        <p>No. There's no chance involved and nothing to win. The outcome depends only on whether you get up. The best case is keeping your own money.</p>
+      </details>
+      <details>
+        <summary>Where does the money go?</summary>
+        <p>To us, the people who run the app. We say it openly so nobody feels tricked.</p>
+      </details>
+      <details>
+        <summary>What if my phone dies?</summary>
+        <p>If no successful result reaches us within 35 minutes of the alarm, the stake counts as lost. Charge your phone.</p>
+      </details>
+      <details>
+        <summary>Can I cancel a stake?</summary>
+        <p>Yes, for free until 2 hours before the alarm. After that it's locked – that's the point.</p>
+      </details>
+      <details>
+        <summary>Can I try it without paying?</summary>
+        <p>Yes. The practice alarm rings in 60 seconds, with no money and no card.</p>
+      </details>
+      <details>
+        <summary>Which phones?</summary>
+        <p>iPhone only. The app needs the iPhone's built-in step counter.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- Schluss -->
+  <section class="block final">
+    <h2 class="poster">Prove it.<br><span class="red">Tomorrow.</span></h2>
+    <p class="voice" data-voice="Coming soon to the App Store. Set an alarm until then. A free one. While you still can.">Coming soon to the App Store. Set an alarm until then. A free one. While you still can.</p>
+  </section>
+
+  <footer>
+    <span>© 2026 BET AGAINST YOURSELF · THE APP YOU'LL HATE.</span>
+    <nav>
+      <a href="/terms/">TERMS</a>
+      <a href="/privacy/">PRIVACY</a>
+      <a href="/support/">SUPPORT</a>
+      <a href="/imprint/">IMPRINT</a>
+    </nav>
+  </footer>
+</div>
+
+<script>
+// Rote Stimme: tippt, sobald die Zeile ins Bild kommt. Ohne JS / bei reduzierter Bewegung steht der Text einfach da.
+// Erst nach dem Laden der Schriften messen – sonst stimmen die reservierten Höhen nicht
+document.fonts.ready.then(() => {
+  if (matchMedia("(prefers-reduced-motion: reduce)").matches || !("IntersectionObserver" in window)) return;
+  const type = (el, text, speed) => new Promise(done => {
+    el.textContent = "";
+    el.classList.add("typing");
+    let i = 0;
+    const tick = () => {
+      el.textContent = text.slice(0, ++i);
+      if (i < text.length) setTimeout(tick, speed); else { el.classList.remove("typing"); done(); }
+    };
+    tick();
+  });
+
+  // Hero: Überschrift Zeile für Zeile, dann die Stimme
+  const heroLines = [...document.querySelectorAll(".hero [data-type]")];
+  const heroVoice = document.querySelector(".hero .voice");
+  const texts = heroLines.map(el => el.textContent);
+  // Höhe der Überschrift festhalten, damit beim Tippen nichts springt
+  const heroTitle = document.querySelector(".hero h1");
+  heroTitle.style.minHeight = heroTitle.offsetHeight + "px";
+  (async () => {
+    for (let i = 0; i < heroLines.length; i++) await type(heroLines[i], texts[i], 70);
+    await new Promise(r => setTimeout(r, 400));
+    await type(heroVoice, heroVoice.dataset.voice, 40);
+  })();
+
+  // Übrige Stimmen beim Scrollen
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      io.unobserve(e.target);
+      type(e.target, e.target.dataset.voice, 28);
+    });
+  }, { threshold: 0.8 });
+  document.querySelectorAll("[data-voice]").forEach(el => {
+    if (el === heroVoice) return;
+    el.style.minHeight = el.offsetHeight + "px";
+    io.observe(el);
+  });
+});
+</script>
 </body>
 </html>
