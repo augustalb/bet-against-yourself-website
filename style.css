@@ -1,10 +1,12 @@
-/* Brutalistischer Look wie in der App: nur Dark Mode, Monospace, accentRed */
+/* Unterseiten (AGB, Datenschutz, Support, Impressum) im Look der App/Landing Page: Schwarz, Linien, accentRed */
 :root {
   --bg: #000;
-  --fg: #fff;
-  --muted: rgba(255, 255, 255, 0.55);
-  --line: rgba(255, 255, 255, 0.15);
-  --red: rgb(230, 38, 38);
+  --fg: #f4f4f2;
+  --muted: #8a8686;
+  --line: #3a3636;
+  --red: #e52626;
+  --poster: "Archivo", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
   color-scheme: dark;
 }
 
@@ -14,7 +16,7 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--fg);
-  font: 15px/1.6 ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  font: 15px/1.65 var(--mono);
   -webkit-text-size-adjust: 100%;
 }
 
@@ -24,20 +26,20 @@ header, main, footer {
   padding: 0 16px;
 }
 
-header { padding-top: 40px; padding-bottom: 24px; border-bottom: 1px solid var(--line); }
+header { padding-top: 24px; padding-bottom: 20px; border-bottom: 2px solid var(--line); }
 
 .logo {
   display: inline-block;
   color: var(--red);
-  font: 900 32px/1.05 -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+  font: 900 26px/1 var(--poster);
+  font-stretch: 62%;
   text-decoration: none;
-  letter-spacing: -0.5px;
 }
 
 main { padding-top: 32px; padding-bottom: 48px; overflow-wrap: anywhere; }
 
-h1 { font-size: 22px; letter-spacing: 3px; margin: 0 0 4px; }
-h2 { font-size: 14px; letter-spacing: 2px; margin: 32px 0 8px; color: var(--red); }
+h1 { font: 900 clamp(48px, 10vw, 84px)/.9 var(--poster); font-stretch: 62%; text-transform: uppercase; margin: 0 0 12px; }
+h2 { font-size: 13px; letter-spacing: .2em; margin: 36px 0 8px; color: var(--red); border-top: 2px solid var(--line); padding-top: 14px; }
 p { margin: 0 0 12px; }
 .meta { color: var(--muted); margin-bottom: 24px; }
 .small { color: var(--muted); font-size: 13px; }
@@ -46,18 +48,12 @@ p { margin: 0 0 12px; }
 a { color: var(--fg); text-decoration-color: var(--red); text-underline-offset: 3px; }
 a:hover { color: var(--red); }
 
-.tag { color: var(--red); font-size: 28px; font-weight: 900; letter-spacing: 2px; margin-bottom: 16px; }
-.lead { font-size: 17px; max-width: 560px; }
-.how { padding-left: 0; list-style: none; margin: 28px 0; border-top: 1px solid var(--line); }
-.how li { padding: 12px 0; border-bottom: 1px solid var(--line); }
-.how b { color: var(--red); display: inline-block; min-width: 64px; }
-
 footer {
   padding-top: 20px;
   padding-bottom: 40px;
-  border-top: 1px solid var(--line);
+  border-top: 2px solid var(--line);
   color: var(--muted);
   font-size: 12px;
-  letter-spacing: 1px;
+  letter-spacing: .12em;
 }
 footer a { color: var(--muted); }

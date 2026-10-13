@@ -5,10 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy Policy – Bet Against Yourself</title>
 <meta name="description" content="Bet Against Yourself – the alarm clock with real stakes. Wake up or pay.">
+<link rel="stylesheet" href="/fonts.css">
 <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-<header><a class="logo" href="/">BET AGAINST<br>YOURSELF</a></header>
+<header><a class="logo" href="/">BET AGAINST YOURSELF</a></header>
 <main>
 <h1>PRIVACY POLICY</h1>
 <p class="meta">Last updated: October 2026</p>
@@ -22,7 +23,7 @@
 <p>Challenge results: date, step count reported at the end of a challenge, and payment status</p>
 <p>Payment data – card or Apple Pay (tokenized exclusively via Stripe — no raw data stored)</p>
 <p>Technical data (device type, iOS version, app version for debugging)</p>
-<p>Motion data (steps): Counted on your device via Apple Core Motion. Only the step count at the end of a challenge is transmitted to our servers to determine whether the stake is charged. No continuous motion or health data is stored.</p>
+<p>Motion data (steps and activity type): Counted on your device via Apple Core Motion. Only the step count at the end of a challenge is transmitted to our servers to determine whether the stake is charged. After a challenge, the app also reads on your device how long the motion sensor classified the movement as walking, running or stationary, and sends a summary of these durations (in seconds, without location or continuous motion data) to our analytics provider PostHog to improve step detection. This summary is never used to charge a stake. No continuous motion or health data is stored.</p>
 <h2>3. PURPOSE OF DATA PROCESSING</h2>
 <p>We process your data solely to:</p>
 <p>– Provide app features (alarm, step counting, payment processing)</p>
@@ -32,7 +33,7 @@
 <h2>4. THIRD-PARTY PROVIDERS</h2>
 <p>Supabase (Ireland / USA): Authentication and database storage. Data processing based on standard contractual clauses.</p>
 <p>Stripe, Inc. (USA): Payment processing (card and Apple Pay). Stripe is PCI-DSS certified. Privacy policy: <a href="https://stripe.com/privacy">stripe.com/privacy</a></p>
-<p>PostHog, Inc. (USA): Usage statistics (app events such as &quot;challenge started&quot;), linked to your account ID. Data processing based on standard contractual clauses.</p>
+<p>PostHog, Inc. (USA): Usage statistics (app events such as &quot;challenge started&quot;) and a summary of motion activity during a challenge (see above), linked to your account ID. Data processing based on standard contractual clauses.</p>
 <p>Resend, Inc. (USA; sending via servers in Ireland): Sending account emails (e.g. sign-up confirmation, password reset), which includes your email address. Data processing based on standard contractual clauses.</p>
 <p>GitHub, Inc. (USA): Hosting of our website getbetagainstyourself.com. When you visit the website, GitHub processes your IP address in server logs. Data processing based on standard contractual clauses.</p>
 <p>Porkbun LLC (USA): Forwarding of emails sent to our support address.</p>
