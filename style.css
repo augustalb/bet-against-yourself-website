@@ -1,4 +1,4 @@
-/* Unterseiten (AGB, Datenschutz, Support, Impressum) im Look der App/Landing Page: Schwarz, Linien, accentRed */
+/* Unterseiten (AGB, Datenschutz, Support, Impressum) im Look der Landing Page: Schwarz, Linien, Rot; Text in Archivo */
 :root {
   --bg: #000;
   --fg: #f4f4f2;
@@ -16,7 +16,8 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--fg);
-  font: 15px/1.65 var(--mono);
+  font: 400 17px/1.6 var(--poster);
+  font-stretch: 100%;
   -webkit-text-size-adjust: 100%;
 }
 
