@@ -6,10 +6,19 @@
 <title>Bet Against Yourself – Wake up or pay</title>
 <meta name="description" content="The alarm clock that takes your money if you don't get up. Put €5–100 on your alarm, walk 100 steps in 5 minutes – or pay.">
 <meta name="theme-color" content="#000000">
+<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <meta property="og:title" content="Bet Against Yourself – Wake up or pay">
 <meta property="og:description" content="The alarm clock that takes your money if you don't get up.">
 <meta property="og:url" content="https://getbetagainstyourself.com/">
 <meta property="og:type" content="website">
+<meta property="og:image" content="https://getbetagainstyourself.com/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="You won't get up. Bet Against Yourself – the alarm clock that takes your money if you don't.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://getbetagainstyourself.com/">
+<script>document.documentElement.classList.add("js")</script>
 <link rel="preload" href="/fonts/archivo-wdth.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/fonts.css">
 <link rel="stylesheet" href="/landing.css">
@@ -94,7 +103,7 @@
           <p class="voice" data-voice="Your brain will do anything to keep those 20 €. Even get up.">Your brain will do anything to keep those 20 €. Even get up.</p>
         </div>
       </div>
-      <div class="bars" role="img" aria-label="Losing 20 euros hurts about twice as much as finding 20 euros feels good">
+      <div class="bars" data-reveal role="img" aria-label="Losing 20 euros hurts about twice as much as finding 20 euros feels good">
         <div>
           <div class="bar-l"><span>Find 20 € on the street</span><span class="ash">feels this good</span></div>
           <div class="track"><div class="fill"></div></div>
@@ -157,7 +166,7 @@
         <p class="lead ash" style="max-width:32em">Every loss comes with a Receipt of Shame. Share it with your friends – or pray nobody asks why you're €20 poorer. Win, and you get bragging rights instead.</p>
         <p class="voice" data-voice="Your friends will love this.">Your friends will love this.</p>
       </div>
-      <div class="receipt">
+      <div class="receipt" data-reveal>
         <div class="t">RECEIPT OF SHAME</div>
         <div class="c">No. 004711</div>
         <hr>
@@ -181,7 +190,7 @@
     </div>
     <div class="soon">
       <article>
-        <span class="chip live">Launching now</span>
+        <span class="chip live">At launch</span>
         <h3 class="poster">Wake up.</h3>
         <p>Walk 100 steps within 5 minutes of your alarm.</p>
         <p class="rule">Stay in bed → pay.</p>
@@ -255,6 +264,17 @@
 </div>
 
 <script>
+// Beleg und Balken: Animation erst starten, wenn sie sichtbar werden
+if ("IntersectionObserver" in window) {
+  // Beobachtet wird der umgebende Block: ein noch per clip-path verdeckter Beleg zählt sonst nie als sichtbar
+  const ro = new IntersectionObserver(es => es.forEach(e => {
+    if (!e.isIntersecting) return;
+    e.target.querySelectorAll("[data-reveal]").forEach(el => el.classList.add("in"));
+    ro.unobserve(e.target);
+  }), { rootMargin: "0px 0px -30% 0px" });
+  document.querySelectorAll("[data-reveal]").forEach(el => ro.observe(el.parentElement));
+}
+
 // Rote Stimme: tippt, sobald die Zeile ins Bild kommt. Ohne JS / bei reduzierter Bewegung steht der Text einfach da.
 // Erst nach dem Laden der Schriften messen – sonst stimmen die reservierten Höhen nicht
 document.fonts.ready.then(() => {

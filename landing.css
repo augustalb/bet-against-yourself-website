@@ -25,7 +25,7 @@ body {
   overflow-x: hidden;
 }
 a { color: inherit; }
-a:focus-visible, button:focus-visible { outline: 2px solid var(--red); outline-offset: 3px; }
+a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid var(--red); outline-offset: 3px; }
 
 .wrap { max-width: 1120px; margin: 0 auto; padding-inline: var(--gutter); }
 
@@ -68,7 +68,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--red); outline-o
   display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, .75fr); gap: clamp(24px, 5vw, 72px);
   align-items: center; padding-block: clamp(40px, 8vw, 96px);
 }
-.hero h1 { font-size: clamp(72px, 15vw, 210px); }
+.hero h1 { font-size: clamp(72px, 11.5vw, 168px); }
 .hero h1 .ash { display: block; }
 .hero .voice { font-size: clamp(18px, 2.2vw, 24px); margin-top: 18px; }
 .hero .lead { max-width: 34em; margin: 26px 0 0; font-size: 16px; color: #cfcac7; }
@@ -87,17 +87,17 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--red); outline-o
 
 /* Telefon mit Lost-Screen */
 .phone {
-  width: min(100%, 330px); aspect-ratio: 9 / 19.5; margin-inline: auto;
+  width: min(100%, 330px); margin-inline: auto;
   border: 10px solid #1d1b1b; border-radius: 46px; background: var(--ink);
   box-shadow: 0 0 0 1px #2c2929, 0 40px 90px -30px rgba(229, 38, 38, .35);
-  padding: 46px 18px 18px; display: flex; flex-direction: column; gap: 10px; overflow: hidden;
+  padding: 46px 18px 22px; display: flex; flex-direction: column; gap: 10px; overflow: hidden;
   position: relative;
 }
 .phone::before { content: ""; position: absolute; top: 12px; left: 50%; translate: -50% 0; width: 32%; height: 20px; border-radius: 99px; background: #000; box-shadow: 0 0 0 1px #222; }
 .phone .big { font-size: 74px; }
 .phone .sub { font: 700 12px/1.4 var(--mono); margin: 2px 0 4px; }
 .phone .voice { font-size: 11px; }
-.phone .p-btn { margin-top: auto; background: var(--red); color: var(--ink); font: 800 11px/1 var(--mono); letter-spacing: .18em; text-align: center; padding: 14px 0; }
+.phone .p-btn { margin-top: 6px; background: var(--red); color: var(--ink); font: 800 11px/1 var(--mono); letter-spacing: .18em; text-align: center; padding: 14px 0; }
 
 /* ---------- Beleg ---------- */
 .receipt {
@@ -138,16 +138,18 @@ ol.steps { margin: 0; padding: 0; }
 .fill { height: 100%; background: var(--bone); width: 50%; animation: grow 1.3s cubic-bezier(.2, .8, .2, 1) .2s both; }
 .fill.loss { background: var(--red); width: 100%; animation-duration: 1.8s; animation-delay: .7s; }
 @keyframes grow { from { width: 0; } }
+/* Mit JS starten Beleg und Balken erst, wenn sie ins Bild kommen. Ohne JS laufen sie sofort. */
+.js [data-reveal]:not(.in), .js [data-reveal]:not(.in) .fill { animation-play-state: paused; }
 .axis { display: flex; justify-content: space-between; font-size: 11px; color: var(--ash); }
 .why .body p { color: #cfcac7; margin: 0 0 14px; max-width: 36em; }
 .why .body p b { color: var(--bone); }
 
 /* Kleingedrucktes, groß */
 .fine { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 clamp(24px, 4vw, 56px); }
-.fine div { border-top: 2px solid var(--line); padding: 18px 0 22px; min-width: 0; }
+.fine > div { border-top: 2px solid var(--line); padding: 18px 0 22px; min-width: 0; }
 .fine h3 { font-size: clamp(30px, 3.6vw, 44px); line-height: .95; margin-bottom: 8px; }
-.fine p { margin: 0; color: var(--ash); font-size: 13px; }
-.statement {
+.fine p { margin: 0; color: #b5b0ad; font-size: 14px; }
+.fine > .statement {
   grid-column: 1 / -1; border: 2px solid var(--line); padding: 16px 18px; margin-top: 26px;
   display: grid; gap: 10px; font-size: 13px;
 }
@@ -166,7 +168,7 @@ ol.steps { margin: 0; padding: 0; }
 .soon article + article { padding-left: 20px; }
 .soon article:last-child { border-right: 0; }
 .soon h3 { font-size: clamp(34px, 3.6vw, 48px); line-height: .92; }
-.soon p { margin: 0; color: #cfcac7; font-size: 13px; }
+.soon p { margin: 0; color: #cfcac7; font-size: 14px; }
 .chip { justify-self: start; font: 800 10px/1 var(--mono); letter-spacing: .2em; padding: 7px 9px; border: 2px solid var(--line); color: var(--ash); text-transform: uppercase; }
 .chip.live { background: var(--red); border-color: var(--red); color: var(--ink); }
 .soon .rule { font: 700 12px/1.5 var(--mono); color: var(--bone); border-top: 1px dashed var(--line); padding-top: 10px; }
@@ -177,12 +179,14 @@ ol.steps { margin: 0; padding: 0; }
 .faq summary { cursor: pointer; font-weight: 800; list-style: none; display: flex; justify-content: space-between; gap: 12px; }
 .faq summary::-webkit-details-marker { display: none; }
 .faq summary::after { content: "+"; color: var(--red); }
+.faq summary:hover { color: var(--red); }
 .faq details[open] summary::after { content: "−"; }
 .faq p { color: #cfcac7; margin: 10px 0 0; font-size: 14px; }
 
 /* Schluss */
 .final { text-align: left; }
-.final h2 { font-size: clamp(64px, 18vw, 240px); overflow-wrap: anywhere; }
+.final h2 { font-size: clamp(60px, 15.5vw, 200px); }
+.final .voice { margin-top: clamp(20px, 3vw, 32px); font-size: clamp(16px, 1.8vw, 20px); max-width: 34em; }
 
 footer {
   border-top: 2px solid var(--line); padding-block: 24px 40px;
